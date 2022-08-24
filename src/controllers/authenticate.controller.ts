@@ -15,7 +15,7 @@ export const login = async (req: Request, res: Response) => {
             console.log(
                 `The user with email ${req?.body?.email} wasn't authenticated with success.`
             );
-            return res.status(404);
+            return res.status(404).send("The email or password are incorrect.");
         }
     } catch (error: any) {
         console.log(error);
