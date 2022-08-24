@@ -1,1 +1,1 @@
-worker: npm i -g ts-node && npm start
+worker: npm start
