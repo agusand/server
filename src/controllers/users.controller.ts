@@ -23,7 +23,7 @@ export const getUser = async (req: Request, res: Response) => {
                     (user as ClientUser)?.id
                 } wasn't getted with success.`
             );
-            return res.status(404);
+            return res.status(404).send();
         }
     } catch (error: any) {
         console.log(error);
