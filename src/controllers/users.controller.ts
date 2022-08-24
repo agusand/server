@@ -16,7 +16,9 @@ export const getUser = async (req: Request, res: Response) => {
                     (user as ClientUser)?.id
                 } was getted with success.`
             );
-            return res.status(200).send({ ...user, id: user._id });
+            return res
+                .status(200)
+                .send({ ...user, id: user._id } as ClientUser);
         } else {
             console.log(
                 `The user with id ${
